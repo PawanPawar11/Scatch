@@ -1,0 +1,18 @@
+usermodel
+    full name - String,
+    email - String,
+    password - String,
+    cart - Array,
+    isAdmin - Boolean,
+    orders - Array,
+    contact - Number,
+    picture - db(Database)
+
+product
+    image - db(Database),
+    name - String,
+    price - Number,
+    discount - Number,
+    bgColor - String,
+    panelColor - String,
+    textColor - String
