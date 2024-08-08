@@ -5,6 +5,9 @@ const path = require("path");
 const ownersRouter = require("./routes/ownersRouter");
 const usersRouter = require("./routes/usersRouter");
 const productRouter = require("./routes/productsRouter");
+const indexRouter = require("./routes/index");
+
+require("dotenv").config();
 
 const db = require("./config/mongoose-connection");
 
@@ -14,6 +17,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
+app.use("/", indexRouter);
 app.use("/owners", ownersRouter);
 app.use("/users", usersRouter);
 app.use("/products", productRouter);
